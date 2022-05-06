@@ -232,7 +232,7 @@ public class RCTMGLCamera extends AbstractMapFeature {
 
     public void setFollowPitch(double pitch) {
         mPitch = pitch;
-//        updateCameraPositionIfNeeded(true);
+        updateCameraPositionIfNeeded(true);
     }
 
     public void setMaxBounds(LatLngBounds bounds) {
@@ -649,7 +649,7 @@ public class RCTMGLCamera extends AbstractMapFeature {
         coords.putDouble("latitude", location.getLatitude());
         coords.putDouble("altitude", location.getAltitude());
         coords.putDouble("accuracy", location.getAccuracy());
-        // A better solution will be to pull the heading from the compass engine, 
+        // A better solution will be to pull the heading from the compass engine,
         // unfortunately the api is not publicly available in the mapbox sdk
         coords.putDouble("heading", location.getBearing());
         coords.putDouble("course", location.getBearing());
